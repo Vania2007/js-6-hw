@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function mcdonalds(nPizzas = 0, nCola = 0) {
+        let pizzaPrice = 5;
+        let colaPrice = 2;
+        let bill;
+        if (nPizzas == 0 && nCola == 0) {
+          bill = `Bye, come back to restaurant again.`;
+        } else if (nCola == 0) {
+          bill = `${nPizzas} pizzas, for you: $${pizzaPrice * nPizzas}`;
+        } else if (nPizzas == 0) {
+          bill = `${nCola} glasses of cola, for you: $${colaPrice * nCola}`;
+        } else {
+          bill = `${nPizzas} pizzas, for you: $${
+            pizzaPrice * nPizzas
+          }\n${nCola} glasses of cola, for you: $${
+            colaPrice * nCola
+          }\nTotal payable: $${pizzaPrice * nPizzas + colaPrice * nCola}`;
+        }
+
+        return bill;
+      }
+      alert(
+        mcdonalds(
+          +prompt("Input count of pizzas"),
+          +prompt("Input count glasses of cola")
+        )
+      );
+    </script>
+  </body>
+</html>

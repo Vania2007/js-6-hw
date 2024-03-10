@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sumOfDigits(num) {
+        let totalSum = 0;
+        while (num > 0) {
+          totalSum += num % 10;
+          num = Math.floor(num / 10);
+        }
+        return totalSum;
+      }
+      let number = +prompt("Input number");
+      let sum = sumOfDigits(number);
+      alert(sum);
+    </script>
+  </body>
+</html>
